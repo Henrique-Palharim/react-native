@@ -1,22 +1,20 @@
-import { Text, View, StyleSheet } from "react-native";
+import { View, StyleSheet } from "react-native";
 import { Link } from "expo-router";
 import { LinearGradient } from "expo-linear-gradient";
 
-export default function Index() {
+export default function NotFound() {
   return (
-    <LinearGradient // funciona como View
-      colors={["#990000ff", "#441717"]}
-      style={styles.container}>
+    <>
+      <LinearGradient
+        colors={["#990000ff", "#441717"]}
+        style={styles.container}>
 
-      <Text style={styles.text}>
-        Esse projeto está sendo desenvolvido em Ruby on Rails por um Aluno do Bicudo
-      </Text>
-
-      <Link href="/about" style={styles.button}>
-        Ir para tela About
-      </Link>
-
-    </LinearGradient>
+        <Link href="/" style={styles.button}>
+          Ir para tela Inicial
+        </Link>
+        
+      </LinearGradient>
+    </>
   );
 }
 

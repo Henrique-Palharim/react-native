@@ -3,3 +3,11 @@ npx create-expo-app@latest nome-do-seu-app
 npx expo start
 
 npm run reset-project
+
+
+/* --------------- GIT --------------- */
+git remote add origin URL_DO_REPOSITORIO
+git add .
+git commit -m "novo início"
+git branch -M main
+git push -u origin main
