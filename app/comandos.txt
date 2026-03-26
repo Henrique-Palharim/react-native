@@ -4,10 +4,13 @@ npx expo start
 
 npm run reset-project
 
+npx expo install expo-font
+
 
 /* --------------- GIT --------------- */
+git init
 git remote add origin URL_DO_REPOSITORIO
+git branch -M main
 git add .
 git commit -m "novo início"
-git branch -M main
 git push -u origin main

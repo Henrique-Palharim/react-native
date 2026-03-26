@@ -12,10 +12,6 @@ export default function AboutScreen() {
         Não pode mexer no celular
       </Text>
 
-      <Link href="/" style={styles.button}>
-        Voltar para a tela inicial
-      </Link>
-
     </LinearGradient>
   );
 }

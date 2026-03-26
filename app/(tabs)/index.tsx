@@ -12,10 +12,6 @@ export default function Index() {
         Esse projeto está sendo desenvolvido em Ruby on Rails por um Aluno do Bicudo
       </Text>
 
-      <Link href="/about" style={styles.button}>
-        Ir para tela About
-      </Link>
-
     </LinearGradient>
   );
 }
