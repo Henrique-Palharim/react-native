@@ -6,7 +6,8 @@ export default function NotFound() {
   return (
     <>
       <LinearGradient
-        colors={["#990000ff", "#441717"]}
+      colors={["#6542a1ff", "#3E1B79", "#1b0346ff"]}
+        // colors={["#990000ff", "#441717"]}
         style={styles.container}>
 
         <Link href="/" style={styles.button}>
@@ -33,7 +34,7 @@ const styles = StyleSheet.create({
   button: {
     color: "#000000ff",
     fontWeight: "bold",
-    backgroundColor: "#FFADAD",
+    backgroundColor: "#f5ff6bff",
     padding: 10,
     borderRadius: 8,
     marginTop: 20,

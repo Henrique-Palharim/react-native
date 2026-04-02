@@ -19,14 +19,14 @@ export default function TabLayout() {
       screenOptions={{
         
         // HEADER
-        headerStyle: { backgroundColor: '#ffffff' }, // '#3b3b3bff'
-        headerTitleStyle: { color: '#990000ff', fontFamily: "PokemonSolid", fontSize: 24 },
+        headerStyle: { backgroundColor: '#6542a1ff' }, // '#3b3b3bff'
+        headerTitleStyle: { color: 'white', fontFamily: "PokemonSolid", fontSize: 24 },
         headerTintColor: '#ffffff',
         headerShadowVisible: false,
 
         // TAB BAR
-        tabBarStyle: { backgroundColor: '#ffffff', borderTopWidth: 0, elevation: 10, height: 50, },
-        tabBarActiveTintColor: '#990000ff',
+        tabBarStyle: { backgroundColor: '#1b0346ff', borderTopWidth: 0, elevation: 10, height: 50, },
+        tabBarActiveTintColor: 'white',
         // tabBarActiveBackgroundColor: '#e9bbbbff',
         tabBarInactiveTintColor: '#999',
         tabBarLabelStyle: { fontSize: 14 },

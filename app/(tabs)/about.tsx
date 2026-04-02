@@ -5,7 +5,7 @@ import { LinearGradient } from "expo-linear-gradient";
 export default function AboutScreen() {
   return (
     <LinearGradient // funciona como View
-      colors={["#990000ff", "#441717"]}
+      colors={["#6542a1ff", "#3E1B79", "#1b0346ff"]}
       style={styles.container}>
 
       <Text style={styles.text}>

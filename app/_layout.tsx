@@ -22,8 +22,8 @@ export default function RootLayout() {
       <StatusBar style="light" />
       <Stack
        screenOptions={{
-        headerStyle: { backgroundColor: "#ffffff" },
-        headerTitleStyle: { color: '#990000ff', fontFamily: "PokemonSolid", fontSize: 24 },
+        headerStyle: { backgroundColor: "#6542a1ff" },
+        headerTitleStyle: { color: 'white', fontFamily: "PokemonSolid", fontSize: 24 },
         headerTintColor: '#ffffff',
         headerShadowVisible: false,
        }}

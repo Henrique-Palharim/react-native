@@ -6,6 +6,7 @@ npm run reset-project
 
 npx expo install expo-font
 
+npx expo install expo-image
 
 /* --------------- GIT --------------- */
 git init
