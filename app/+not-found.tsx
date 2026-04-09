@@ -6,7 +6,7 @@ export default function NotFound() {
   return (
     <>
       <LinearGradient
-      colors={["#6542a1ff", "#3E1B79", "#1b0346ff"]}
+      colors={["#FAE6C9", "#D1AD72", "#72514A"]}
         // colors={["#990000ff", "#441717"]}
         style={styles.container}>
 
@@ -32,9 +32,10 @@ const styles = StyleSheet.create({
     fontSize: 24,
   },
   button: {
-    color: "#000000ff",
+    fontSize: 20,
+    color: "#000",
     fontWeight: "bold",
-    backgroundColor: "#f5ff6bff",
+    backgroundColor: "#fff",
     padding: 10,
     borderRadius: 8,
     marginTop: 20,

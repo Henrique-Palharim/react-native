@@ -1,13 +1,17 @@
 import React from 'react';
 import { View, Text, TextInput, Button, FlatList, TouchableOpacity, StyleSheet } from 'react-native';
 import { useTarefas } from '../../hooks/useTarefas';
+import { LinearGradient } from 'expo-linear-gradient';
 
 export default function App() {
 
     const { tarefas, novaTarefa, setNovaTarefa, adicionarTarefa, removerTarefa } = useTarefas();
 
     return (
-        <View style={styles.container}>
+        <LinearGradient 
+         style={styles.container}
+         colors={["#FAE6C9", "#e0c59cff","#D1AD72", "#72514A"]}>
+
             <Text style={styles.titulo}>Lista de Tarefas</Text>
 
             <View style={styles.inputContainer}>
@@ -17,7 +21,12 @@ export default function App() {
                     value={novaTarefa}
                     onChangeText={setNovaTarefa}
                 />
-                <Button title="Adicionar" onPress={adicionarTarefa} />
+                <TouchableOpacity 
+                    style={styles.button} 
+                    onPress={adicionarTarefa}
+                >
+                    <Text style={styles.buttonText}>Adicionar</Text>
+                </TouchableOpacity>
             </View>
 
             <FlatList
@@ -32,17 +41,44 @@ export default function App() {
                     </View>
                 )}
             />
-        </View>
+        </LinearGradient>
     );
 }
 
 const styles = StyleSheet.create({
-    container: { flex: 1, padding: 20, backgroundColor: '#f4f4f4' },
-    titulo: { fontSize: 24, fontWeight: 'bold', textAlign: 'center', marginBottom: 20 },
-    inputContainer: { flexDirection: 'row', marginBottom: 10 },
-    input: { flex: 1, borderWidth: 1, borderColor: '#ccc', padding: 10, borderRadius: 5, marginRight: 10 },
-    tarefaContainer: { flexDirection: 'row', justifyContent: 'space-between', backgroundColor: '#fff', padding: 15,
-        marginBottom: 5, borderRadius: 5, shadowColor: '#000', shadowOpacity: 0.1, shadowRadius: 3, elevation: 2},
-    tarefaTexto: { fontSize: 16 },
-    remover: { color: 'red', fontSize: 18, fontWeight: 'bold' },
+    container: { 
+        flex: 1, padding: 20, backgroundColor: '#f4f4f4' 
+    },
+    titulo: { 
+        fontSize: 24, fontWeight: 'bold', textAlign: 'center', marginBottom: 20 
+    },
+    inputContainer: { 
+        flexDirection: 'row', marginBottom: 10 
+    },
+    input: { 
+        flex: 1, borderWidth: 1, backgroundColor: 'white' , borderColor: '#ccc', padding: 10, borderRadius: 5, marginRight: 10 
+    },
+    tarefaContainer: { 
+        flexDirection: 'row', justifyContent: 'space-between', backgroundColor: '#fff', padding: 15,
+        marginBottom: 5, borderRadius: 5, shadowColor: '#000', shadowOpacity: 0.1, shadowRadius: 3, elevation: 2
+    },
+    tarefaTexto: { 
+        fontSize: 16 
+    },
+    remover: { 
+        color: 'red', fontSize: 18, fontWeight: 'bold' 
+    },
+    button: {
+        backgroundColor: '#B75426',
+        paddingVertical: 10,
+        paddingHorizontal: 20,
+        borderRadius: 5,
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+    buttonText: {
+        color: '#fff',
+        fontWeight: 'bold',
+        fontSize: 16
+    }
 });

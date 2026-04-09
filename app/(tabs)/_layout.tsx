@@ -19,13 +19,13 @@ export default function TabLayout() {
       screenOptions={{
         
         // HEADER
-        headerStyle: { backgroundColor: '#6542a1ff' }, // '#3b3b3bff'
-        headerTitleStyle: { color: 'white', fontFamily: "PokemonSolid", fontSize: 24 },
-        headerTintColor: '#ffffff',
+        headerStyle: { backgroundColor: '#FAE6C9' }, // '#3b3b3bff'
+        headerTitleStyle: { color: '#000000', fontFamily: "PokemonSolid", fontSize: 24 },
+        headerTintColor: '#000000',
         headerShadowVisible: false,
 
         // TAB BAR
-        tabBarStyle: { backgroundColor: '#1b0346ff', borderTopWidth: 0, elevation: 10, height: 50, },
+        tabBarStyle: { backgroundColor: '#72514A', borderTopWidth: 0, elevation: 10, height: 50, },
         tabBarActiveTintColor: 'white',
         // tabBarActiveBackgroundColor: '#e9bbbbff',
         tabBarInactiveTintColor: '#999',
@@ -47,6 +47,15 @@ export default function TabLayout() {
         options={{ title: "Sobre", tabBarIcon: ({ color, focused }) => (
           <Ionicons 
               name={focused ? 'information-circle' : 'information-circle-outline'} color={color} size={24} />
+          ),
+        }} 
+      />
+
+      <Tabs.Screen 
+        name="battle" 
+        options={{ title: "Battle", tabBarIcon: ({ color, focused }) => (
+          <Ionicons 
+              name={focused ? 'flame' : 'flame-outline'} color={color} size={24} />
           ),
         }} 
       />

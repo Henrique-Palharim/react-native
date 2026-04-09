@@ -1,20 +1,22 @@
-import { StyleSheet, View, Pressable, Text } from "react-native";
+import { StyleSheet, View, Pressable, Text, StyleProp, ViewStyle } from "react-native";
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 
 type Props = {
     label: string;
-    theme?: 'primary';
+    theme?: 'primary' | 'ghost' | 'fairy';
     onPress?: () => void;
+    style?: StyleProp<ViewStyle>;
 }
 
-export default function Button({ label, theme, onPress }: Props) {
+export default function Button({ label, theme, onPress, style: customStyle }: Props) {
     if (theme == 'primary') {
         return (
             <View style={style.buttonContainer}>
                 <Pressable
                     style={[
                         style.button,
-                        theme === 'primary' && { backgroundColor: '#FE9C51' }
+                        theme === 'primary' && { backgroundColor: '#FE9C51' },
+                        customStyle,
                     ]}
                     onPress={onPress}
                 >
@@ -23,6 +25,20 @@ export default function Button({ label, theme, onPress }: Props) {
             </View>
         );
 
+    }
+    else if (theme == 'ghost') {
+        return (
+            <View style={[style.buttonContainer, { backgroundColor: "#5269AD", width: 100, height: 40, borderRadius: 8 }, customStyle]}>
+                <Text style={[style.buttonLabel, { color: 'fff' }]}>{label}</Text>
+            </View>
+        )
+    }
+    else if (theme == 'fairy') {
+        return (
+            <View style={[style.buttonContainer, { backgroundColor: "#EC8FE6", width: 100, height: 40, borderRadius: 8 }, customStyle]}>
+                <Text style={[style.buttonLabel, { color: 'fff' }]}>{label}</Text>
+            </View>
+        )
     }
 
     return (
